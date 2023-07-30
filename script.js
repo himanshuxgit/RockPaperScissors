@@ -60,5 +60,21 @@ function handleClick(event) {
   game(playerSelection);
 }
 
+function resetGame() {
+  const resultsDiv = document.getElementById("results");
+  const buttons = document.querySelectorAll(".choices button");
+  buttons.forEach(button => button.addEventListener("click", handleClick));
+
+  document.getElementById("player-score").textContent = "0";
+  document.getElementById("computer-score").textContent = "0";
+  resultsDiv.textContent = "";
+
+
+  buttons.forEach(button => button.disabled = false);
+}
+
 const buttons = document.querySelectorAll(".choices button");
 buttons.forEach(button => button.addEventListener("click", handleClick));
+
+const resetButton = document.getElementById("reset");
+resetButton.addEventListener("click", resetGame);

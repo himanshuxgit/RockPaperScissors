@@ -2,21 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rock Paper Scissors Game</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <div class="score-board">
-    <span id="player-score">0</span> - <span id="computer-score">0</span>
-  </div>
-  <div class="choices">
-    <button id="rock">Rock</button>
-    <button id="paper">Paper</button>
-    <button id="scissors">Scissors</button>
-  </div>
-  <div id="results"></div>
+  <title>Rock Paper Scissors</title>
   
-  <script src="script.js"></script>
-</body>
-</html>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Rock Paper Scissors</title>
+   
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  </head>
+  
+  <body class="h-screen flex justify-center items-center bg-gray-900">
+    <div class="bg-gradient-to-r from-indigo-500 to-purple-500 p-4 rounded-lg shadow-lg max-w-lg mx-auto">
+      <div class="text-4xl text-white font-semibold text-center">Rock Paper Scissors</div>
+      <div class="text-xl text-gray-200 text-center mt-4">
+        <span id="player-score" class="text-yellow-300 animate-pulse transition-all">0</span> -
+        <span id="computer-score" class="text-yellow-300 animate-pulse transition-all">0</span>
+      </div>
+      <div class="flex justify-center gap-4 mt-8 choices">
+        <button class="btn bg-white p-4 rounded-full shadow-md hover:scale-110 transform transition-all" id="rock">Rock</button>
+        <button class="btn bg-white p-4 rounded-full shadow-md hover:scale-110 transform transition-all" id="paper">Paper</button>
+        <button class="btn bg-white p-4 rounded-full shadow-md hover:scale-110 transform transition-all" id="scissors">Scissors</button>
+      </div>
+      <div id="results" class="text-center text-white mt-4"></div>
+      <div class="flex justify-center mt-8">
+        <button class="reset-btn bg-purple-500 text-white px-4 py-2 rounded shadow-md hover:bg-purple-600 transition-all" id="reset">Reset Game</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+  </html>
